@@ -12,8 +12,8 @@ export class EjemploDirectivasComponent {
   mostrarAlumnos = false
   mostrarCursos = false
 
-  alumnosLista: { id: number; nombre: string; apellido: string }[] = [];
-  cursosLista: { id: number; nombre: string; precio: number }[] = []; 
+  alumnosLista: Alumno = []
+  cursosLista: Curso = []
 
   verAlumnos(): void {
     this.mostrarAlumnos = true
@@ -32,4 +32,7 @@ export class EjemploDirectivasComponent {
   }
 
 }
+
+type Alumno = Array<{id: number; nombre: string; apellido: string}>
+type Curso = Array<{id: number; nombre: string; precio: number}>
 
