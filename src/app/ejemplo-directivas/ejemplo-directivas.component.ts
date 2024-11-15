@@ -9,4 +9,27 @@ import { Component } from '@angular/core';
 })
 export class EjemploDirectivasComponent {
 
+  mostrarAlumnos = false
+  mostrarCursos = false
+
+  alumnosLista: { id: number; nombre: string; apellido: string }[] = [];
+  cursosLista: { id: number; nombre: string; precio: number }[] = []; 
+
+  verAlumnos(): void {
+    this.mostrarAlumnos = true
+    this.alumnosLista.push({id: 1, nombre: "Luis Angel", apellido: "Salvat"})
+    this.alumnosLista.push({id: 2, nombre: "Harold Angel", apellido: "Salvat"})
+    this.alumnosLista.push({id: 3, nombre: "María Angel", apellido: "Salvat"})
+    this.alumnosLista.push({id: 4, nombre: "Julio", apellido: "Salvat"})
+  }
+
+  verCursos(): void {
+    this.mostrarCursos = true
+    this.cursosLista.push({id: 1, nombre: "Desarrollo Web", precio: 1230})
+    this.cursosLista.push({id: 2, nombre: "Desarrollo Aplicaciones Móviles", precio: 4030})
+    this.cursosLista.push({id: 3, nombre: "Desarrollo Base de Datos 1", precio: 2330})
+    this.cursosLista.push({id: 4, nombre: "Scrum", precio: 5230})
+  }
+
 }
+
